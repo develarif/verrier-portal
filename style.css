@@ -1,0 +1,269 @@
+/*
+# Google Font ( Poppins ) Import from google
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+#vp-dark-btn:checked ~ label div {
+    transform: translateX(36px);
+}
+
+.vp__dark__mode .moon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+.vp__dark__mode .sun {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/*
+############## LOGIN PAGE STYLES ################
+*/
+
+.vp__login > .vp__container {
+    min-height: 100vh;
+}
+
+.dark .left-shadow {
+    position: relative;
+    z-index: 1;
+}
+
+.dark .left-shadow::after {
+    position: absolute;
+    top: -62%;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        42.17% 42.17% at 50% 50%,
+        #613cf3 0%,
+        rgba(42, 35, 127, 0.499535) 33.52%,
+        rgba(60, 20, 34, 0.210801) 71.94%,
+        rgba(5, 9, 11, 0) 100%
+    );
+    z-index: -1;
+}
+
+.right-shadow {
+    position: relative;
+    z-index: 11;
+}
+
+.right-shadow::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+}
+
+.dark .right-shadow::after {
+    background: linear-gradient(90deg, #18275c 0%, #6c106d 100%);
+    opacity: 0.4;
+}
+
+/* .form form label {
+    font-size: 16px;
+    margin-bottom: 4px;
+} */
+
+/* .form form input {
+    width: 100%;
+    height: 42px;
+    padding-left: 12px;
+    font-size: 15px;
+    line-height: 22px;
+    background: rgba(255, 255, 255, 0.09);
+    color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+} */
+
+.form form input[type='checkbox'] {
+    width: 16px;
+    margin-right: 15px;
+    margin-top: -5px;
+}
+
+
+/*######################
+    ----- Header Design ----------
+######################*/
+
+.light-logo {
+    display: none;
+}
+
+.dark-logo {
+    display: block;
+}
+
+.dark .dark-logo {
+    display: none;
+}
+
+.dark .light-logo {
+    display: block;
+}
+
+.vp__header {
+    position: relative;
+}
+
+.vp__header .header-content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.vp__header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(176.45deg, #18275c -3.14%, #8b218d 165.23%);
+    opacity: 1;
+    z-index: -1;
+}
+
+.dark .vp__header::before {
+    opacity: 0.25;
+}
+
+.vp__menus ul li {
+    padding-left: 25px;
+    margin: 0 25px 25px 0;
+    color: #898fa0;
+}
+
+.vp__menus ul li.active {
+    background: linear-gradient(96.31deg, #2d8e95 0%, #7219e2 102.56%);
+    border-radius: 0px 12px 12px 0px;
+    color: white;
+}
+
+.vp__menus ul li.active svg path {
+    fill: white;
+}
+
+.vp__menus ul li svg {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.vp__menus ul li a {
+    padding: 10px 0;
+}
+
+.vp__menus ul li a span {
+    font-size: 18px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border: double 1.5px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white), linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 999px;
+}
+
+.dark .avatar {
+    background-image: linear-gradient(#060A0C, #060A0C), linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+}
+
+.avatar img {
+    padding: 1.4px;
+}
+
+/*######################
+    ----- Mobile Menu ----------
+######################*/
+
+.mobile-menu .icon i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.show-mobile-menu {
+    display: block;
+    position: fixed;
+    min-height: 100vh;
+    z-index: 999;
+}
+
+/*########
+### --- Dashboard Page --- ###
+########*/
+
+.data-table {
+    background: white;
+    box-shadow: 0px 13px 74px rgba(0, 0, 0, 0.03);
+}
+
+.dark .data-table {
+    position: relative;
+    z-index: 1;
+    background: #060a0c;
+}
+
+.dark .data-table::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(90deg, #18275c 0%, #6c106d 100%);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.splide .splide__slide .post {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+}
+
+/*######################
+    ----- Blog Slider ----------
+######################*/
+
+.splide .splide__slide .post img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/*######################
+    ----- Responsive Design ----------
+######################*/
+
+@media all and (max-width: 1024px) {
+    .left-shadow::after {
+        display: none;
+    }
+}

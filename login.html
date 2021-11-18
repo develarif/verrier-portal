@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verrier Portal - Login</title>
+
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css animation style file -->
+    <link rel="stylesheet" href="./lib/css/animate.min.css">
+    <!-- style files -->
+    <link rel="stylesheet" href="lib/css/tailwind.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-vp-white dark:bg-vp-black">
+    <main class="vp__login w-full text-gray-700 dark:text-gray-200">
+        <div class="vp__container flex flex-col-reverse lg:flex-row justify-between">
+            <div class="vp__login__left w-full lg:w-1/2 flex items-center left-shadow">
+                <div class="vp__left__content w-full p-8 lg:p-16 mb-10 lg:mb-0">
+                    <div class="logo">
+                        <a href="#">
+                            <img class="w-48 light-logo" src="./images/logo.png" alt="">
+                            <img class="w-48 dark-logo" src="./images/linear-logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="intro mt-12 mb-16">
+                        <p class="text-2xl md:text-3xl">Welcome 🖐</p>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-4">Login to your account</h1>
+                    </div>
+                    <div class="form">
+                        <form action="#">
+                            <div class="vp__email">
+                                <p>
+                                    <label for="login__email" class="inline-block text-lg mb-1">Email</label>
+                                </p>
+                                <input id="login__email" type="email" placeholder="Email address" class="italic w-full h-10 text-gray-500 px-3 bg-vp-vp-input-bg dark:bg-vp-vp-input-bg-dark rounded">
+                            </div>
+                            <div class="vp__password mt-4">
+                                <p>
+                                    <label for="login__pass" class="inline-block text-lg">Password</label>
+                                </p>
+                                <input id="login__pass" type="password" placeholder="Password" class="italic w-full h-10 text-gray-500 px-3 bg-vp-vp-input-bg dark:bg-vp-vp-input-bg-dark rounded">
+                            </div>
+                            <div class="vp__forgot__pass mt-4 text-left lg:text-right">
+                                <a href="#" class="text-gray-500 text-sm italic">Forgot Password?</a>
+                            </div>
+                            <div class="vp__btn flex flex-col-reverse lg:flex-row justify-between items-start lg:items-center mt-0 lg:mt-4">
+                                <div class="btn mt-4 lg:mt-0">
+                                    <button class="bg-vp-green-blue py-2 px-10 rounded text-lg text-gray-200">Login</button>
+                                </div>
+                                <div class="vp__register">
+                                   <p class="text-gray-500 text-sm italic">
+                                       Have an account? 
+                                       <a href="register.html" class="text-gray-700 dark:text-gray-200">Register</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="vp__login__right w-full lg:w-1/2 flex items-center right-shadow">
+                <div class="vp__right__content w-full p-8 lg:p-16">
+                    <div class="banner">
+                        <img class="w-full max-w-lg mx-auto" src="./images/login-banner.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark Mode Button -->
+        <div class="vp__dark__mode flex items-center justify-center w-10 h-10 rounded-full bg-vp-black fixed bottom-10 right-10 z-50">
+            <input type="checkbox" id="dark-input" class="hidden">
+            <label for="dark-input" style="display: contents;" id="darkinput-label">
+                <i class="fas fa-moon moon"></i>
+                <i class="fas fa-sun sun"></i>
+            </label>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="./inc/js/darkMode.js"></script>
+</body>
+</html>
