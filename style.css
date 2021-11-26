@@ -223,6 +223,7 @@ input {
     left: 0;
     top: 0;
     width: 100%;
+    /* min-width: 900px; */
     height: 100%;
     content: '';
     background: linear-gradient(90deg, #18275c 0%, #6c106d 100%);
@@ -245,6 +246,111 @@ input {
     width: 100%;
     height: 210px;
     object-fit: cover;
+}
+
+/*######################
+----- Wallet Tab ----------
+######################*/
+
+.vp__wallet__tab ul li {
+    position: relative;
+    font-size: 16px;
+}
+
+.vp__wallet__tab ul li.active::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wallet__send_money input {
+    background: transparent;
+}
+
+img.light {
+    display: block;
+}
+
+img.dark {
+    display: none;
+}
+
+.dark img.light {
+    display: none;
+}
+
+.dark img.dark {
+    display: block;
+}
+
+/*######################
+    ----- Scrollbar Design ----------
+######################*/
+
+
+.table-scroll {
+    background: #fff;
+    box-shadow: 0px 13px 74px rgba(0, 0, 0, 0.03);
+    overflow-x: auto;
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 30px;
+    height: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px; 
+    background: linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+}
+
+.table-scroll-content {
+    width: 100%;
+    min-width: 900px;
+}
+
+.dark .table-scroll {
+    background: #060A0C;
+}
+
+.dark .table-scroll-content {
+    background: linear-gradient(90deg, rgba(24,39,92,0.3) 0%, rgba(108,16,109,0.3) 100%);
+}
+
+.tab-item {
+    display: none;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+.token-copy-area {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#ver-token-btn2 {
+    display: block;
+}
+
+#ver-token-btn1 {
+    display: none;
+}
+
+.dark #ver-token-btn2 {
+    display: none;
+}
+
+.dark #ver-token-btn1 {
+    display: block;
 }
 
 /*######################
