@@ -393,7 +393,13 @@ img.dark {
     border-radius: 10px;
 }
 
+.bill-fallback, .billing-tab-item {
+    display: none;
+}
 
+.billing-tab-item.active {
+    display: block;
+}
 
 /*######################
     ----- Responsive Design ----------

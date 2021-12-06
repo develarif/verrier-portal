@@ -256,35 +256,109 @@
                         </div>
                         
                         <!-- Billing Debit/Credit Options -->
-                        <div class="vp__billing__options my-12">
-                            <div class="option_heding">
-                                <h1 class="text-xl lg:text-3xl font-bold">Payment Methods</h1>
-                                <p class="text-sm text-gray-500">Select the payment method that works best with you, VER token balance or credit/debit card.</p>
-                            </div>
-                            <div class="data-table my-8 p-4 rounded-lg">
-                                <div class="billing-tab-indicator border-b-2 border-gray-100 dark:border-gray-700 pb-3">
-                                    <ul class="tab-indicator list-none flex">
-                                        <li class="active">Cryptocurrency</li>
-                                        <li>Credit/Debit Cards</li>
-                                    </ul>
+                        <div class="table-scroll data-table p-4 rounded-lg mt-10">
+                            <div class="vp__billing__options table-scroll-content">
+                                <div class="option_heding">
+                                    <h1 class="text-xl lg:text-3xl font-bold">Payment Methods</h1>
+                                    <p class="text-sm text-gray-500">Select the payment method that works best with you, VER token balance or credit/debit card.</p>
                                 </div>
-                                <div class="billing-tab-body pt-3">
-                                    <form action="#">
-                                        <div class="option flex items-center mb-5">
-                                            <input type="radio" name="billingOption" id="billVerrier" class="w-6 h-6">
-                                            <label for="billVerrier" class="flex items-center ml-4 font-semibold text-lg">
-                                                <img src="images/icons/verangleicon.svg" alt="" class="w-8 h-8 mr-3">
-                                                 Verrier ( Ver ) Token
-                                            </label>
+                                <div class="mt-6">
+                                    <div class="billing-tab-indicator border-b-2 border-gray-100 dark:border-gray-700 pb-3">
+                                        <ul class="tab-indicator list-none flex" id="billing-tab-ui">
+                                            <li class="active">Cryptocurrency</li>
+                                            <li>Credit/Debit Cards</li>
+                                        </ul>
+                                    </div>
+                                    <div class="billing-tab-body">
+                                        <div class="billing-tab-item active pt-3">
+                                            <form action="#">
+                                                <div class="option flex items-center mb-5">
+                                                    <input type="radio" name="billingOption" id="billVerrier" class="w-6 h-6" checked>
+                                                    <label for="billVerrier" class="flex items-center ml-4 font-semibold text-lg">
+                                                        <img src="images/icons/verangleicon.svg" alt="" class="w-8 h-8 mr-3">
+                                                         Verrier ( Ver ) Token
+                                                    </label>
+                                                </div>
+                                                <div class="option flex items-center">
+                                                    <input type="radio" name="billingOption" id="stlrToken" class="w-6 h-6">
+                                                    <label for="stlrToken" class="flex items-center ml-4 font-semibold text-lg">
+                                                        <img src="images/icons/verangleicon.svg" alt="" class="w-8 h-8 mr-3">
+                                                         Comp ( Com ) Token
+                                                    </label>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="option flex items-center">
-                                            <input type="radio" name="billingOption" id="stlrToken" class="w-6 h-6">
-                                            <label for="stlrToken" class="flex items-center ml-4 font-semibold text-lg">
-                                                <img src="images/icons/verangleicon.svg" alt="" class="w-8 h-8 mr-3">
-                                                 Comp ( Com ) Token
-                                            </label>
+        
+                                        <!-- Card Selection -->
+                                        <div class="billing-tab-item pt-3">
+                                            <ul class="list-none text-gray-500 text-sm grid grid-cols-6 py-3">
+                                                <li>Type</li>
+                                                <li>Card Number</li>
+                                                <li>Author Name</li>
+                                                <li>Expire Date</li>
+                                            </ul>
+                                            <form action="#">
+                                                <div class="billing-card-group">
+                                                    <div class="active card-item grid grid-cols-6 items-center border-t-2 border-gray-100 dark:border-gray-700 py-4">
+                                                        <div class="card-name flex items-center">
+                                                            <input type="radio" name="cardselect" id="mastercard" class="w-6 h-6" checked>
+                                                            <label for="mastercard" class="ml-4 font-semibold text-lg">Master Card</label>
+                                                        </div>
+                                                        <div class="card-author">
+                                                            <p class="text-base font-medium">Alex Baker</p>
+                                                        </div>
+                                                        <div class="card-number">
+                                                            <p class="text-base font-medium">#4398 5040 45607</p>
+                                                        </div>
+                                                        <div class="card-exp">
+                                                            <p class="text-base font-medium">12/10/2022</p>
+                                                        </div>
+                                                        <div class="fallback flex items-center">
+                                                            <div class="w-36 mb-2.5 bg-vp-btn-alpha rounded-full set-bill-fallback">
+                                                                <p class="inline-block w-full bg-vp-green-blue px-2.5 py-2 text-transparent bg-clip-text text-sm text-center cursor-pointer">Set as Fallback</p>
+                                                            </div>
+                                                            <div class="w-20 flex items-center bg-vp-status-green rounded-full bill-fallback">
+                                                                <p href="#" class="w-full px-2.5 py-1.5 text-sm text-gray-100 text-center">Fallback</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="w-28 mb-2.5 bg-vp-alpha-red rounded-full">
+                                                            <p class="flex items-center justify-center w-full px-2.5 py-2 text-red-500 text-center cursor-pointer">
+                                                                <img src="images/icons/delete.svg" alt="" class="mr-2.5 w-2.5"> Delete
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-item grid grid-cols-6 items-center border-t-2 border-gray-100 dark:border-gray-700 py-4">
+                                                        <div class="card-name flex items-center">
+                                                            <input type="radio" name="cardselect" id="mastercard" class="w-6 h-6">
+                                                            <label for="mastercard" class="ml-4 font-semibold text-lg">Master Card</label>
+                                                        </div>
+                                                        <div class="card-author">
+                                                            <p class="text-base font-medium">Alex Baker</p>
+                                                        </div>
+                                                        <div class="card-number">
+                                                            <p class="text-base font-medium">#4398 5040 45607</p>
+                                                        </div>
+                                                        <div class="card-exp">
+                                                            <p class="text-base font-medium">12/10/2022</p>
+                                                        </div>
+                                                        <div class="fallback flex items-center">
+                                                            <div class="w-36 bg-vp-btn-alpha rounded-full set-bill-fallback">
+                                                                <p class="inline-block w-full bg-vp-green-blue px-2.5 py-2 text-transparent bg-clip-text text-sm text-center cursor-pointer">Set as Fallback</p>
+                                                            </div>
+                                                            <div class="w-20 flex items-center bg-vp-status-green rounded-full bill-fallback">
+                                                                <p href="#" class="w-full px-2.5 py-1.5 text-sm text-gray-100 text-center">Fallback</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="w-28 bg-vp-alpha-red rounded-full">
+                                                            <p class="flex items-center justify-center w-full px-2.5 py-2 text-red-500 text-center cursor-pointer">
+                                                                <img src="images/icons/delete.svg" alt="" class="mr-2.5 w-2.5"> Delete
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -445,7 +519,7 @@
                                                     </div>
                                                     <div class="view-btn w-24 mb-2.5 bg-vp-btn-alpha rounded-full">
                                                         <a href="#" class="flex items-center justify-center w-full bg-vp-green-blue px-2.5 py-2 text-transparent bg-clip-text text-sm text-center">
-                                                            Option <img src="images/icons/down-arrow.svg" alt="" class="ml-2.5 w-3">
+                                                            Option <img src="images/icons/down-arrow.svg" alt="" class="ml-2.5 w-2.5">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -477,7 +551,7 @@
                                                     </div>
                                                     <div class="view-btn w-24 mb-2.5 bg-vp-btn-alpha rounded-full">
                                                         <a href="#" class="flex items-center justify-center w-full bg-vp-green-blue px-2.5 py-2 text-transparent bg-clip-text text-sm text-center">
-                                                            Option <img src="images/icons/down-arrow.svg" alt="" class="ml-2.5 w-3">
+                                                            Option <img src="images/icons/down-arrow.svg" alt="" class="ml-2.5 w-2.5">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -495,5 +569,7 @@
         <script src="./inc/js/darkMode.js"></script>
         <!-- Mobile Menu -->
         <script src="./inc/js/mobileMenu.js"></script>
+        <!-- Tab JS -->
+        <script src="./inc/js/walletTab.js"></script>
     </body>
 </html>
