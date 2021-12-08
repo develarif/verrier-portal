@@ -401,6 +401,33 @@ img.dark {
     display: block;
 }
 
+/* Setting Page */
+
+.setting-tab-body .tab-item {
+    display: none;
+}
+
+.setting-tab-body .tab-item.active {
+    display: block;
+}
+
+.setting-tab-item {
+    width: 180px;
+    border: 2px solid;
+    border-color: #f6f6f6;
+    border-radius: 4px;
+    margin: 8px 8px 8px 0;
+}
+
+.setting-tab-item.active {
+    background: linear-gradient(96.31deg, rgba(45, 142, 149, 0.15) 0%, rgba(114, 25, 226, 0.15) 102.56%);
+    border-color: #8a9ae8;
+}
+
+.dark .setting-tab-item {
+    border-color: #374151;
+}
+
 /*######################
     ----- Responsive Design ----------
 ######################*/
@@ -408,5 +435,11 @@ img.dark {
 @media all and (max-width: 1024px) {
     .left-shadow::after {
         display: none;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .setting-tab-item {
+        margin: 8px 0 8px 0;
     }
 }
