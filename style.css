@@ -428,6 +428,13 @@ img.dark {
     border-color: #374151;
 }
 
+.noti-view {
+    background: linear-gradient(89.33deg, #30B8C2 0.58%, #30BFCA 109.32%, #30C7D2 109.33%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 /*######################
     ----- Responsive Design ----------
 ######################*/
