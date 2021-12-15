@@ -435,6 +435,18 @@ img.dark {
     background-clip: text;
 }
 
+
+
+/*######################
+    ----- Hosting Page Design ----------
+######################*/
+
+.vp__hosting .mailbox-form .mailbox-inputs input, select {
+    width: 100%;
+}
+
+
+
 /*######################
     ----- Responsive Design ----------
 ######################*/
