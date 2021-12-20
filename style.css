@@ -319,6 +319,10 @@ img.dark {
     min-width: 900px;
 }
 
+.wide-table-scroll-content {
+    min-width: 1500px;
+}
+
 .dark .table-scroll {
     background: #060A0C;
 }
@@ -326,6 +330,9 @@ img.dark {
 .dark .table-scroll-content {
     background: linear-gradient(90deg, rgba(24,39,92,0.3) 0%, rgba(108,16,109,0.3) 100%);
 }
+
+
+/* Tab Design */
 
 .tab-item {
     display: none;
@@ -445,11 +452,128 @@ img.dark {
     width: 100%;
 }
 
+.vp__domain input, input[type="checkbox"]:not() {
+    width: 100%;
+}
+
+.domain-submenu {
+    display: none;
+    visibility: hidden;
+    background: #f3f4f6;
+    z-index: 1111;
+}
+
+.domain-op-btn:hover > .domain-submenu {
+    display: block;
+    visibility: visible;
+}
 
 
 /*######################
+    ----- Single website slider ----------
+####################*/
+
+#single-website-analytics {
+    position: relative;
+}
+
+#single-website-analytics .single-website-slider .item {
+    display: none;
+}
+
+#single-website-analytics .single-website-slider .item.active {
+    display: block;
+}
+
+#single-website-analytics .slider-pagination {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#single-website-analytics .slider-pagination .pagi {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    background: rgba(202, 198, 198, 0.7);
+}
+
+#single-website-analytics .slider-pagination .pagi.active {
+    background: linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+}
+
+
+/*######################
+    ----- Chatting window Design ----
+/*###################### */
+
+.chatting {
+    position: relative;
+}
+
+.prev-msg {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 48px);
+    background: #fff;
+    padding-top: 10px;
+}
+
+.chatting .user,
+.chatting .me {
+    margin: 20px 0;
+}
+
+/* .chatting .user .msg,
+.chatting .me .msg {
+    display: flex;
+    align-items: flex-end;
+} */
+
+.chatting .me .msg {
+    flex-direction: row-reverse;
+}
+
+.chatting .me .msg > .content {
+    background: linear-gradient(96.31deg, #2D8E95 0%, #7219E2 102.56%);
+    color: #fff;
+}
+
+.chatting .user .msg > .content {
+    background: rgba(0, 0, 0, 0.08);
+    color: #000;
+}
+
+.dark .chatting .user .msg > .content {
+    background: rgb(228, 228, 228);;
+}
+
+.chatting .user .msg .chat-avatar{
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.chatting .me .msg .chat-avatar{
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.chatting-input {
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+
+/* ######################
     ----- Responsive Design ----------
-######################*/
+###################### */
 
 @media all and (max-width: 1024px) {
     .left-shadow::after {
